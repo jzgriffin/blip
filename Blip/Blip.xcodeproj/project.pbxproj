@@ -37,6 +37,7 @@
 		E50DB5A71C543146000B5D4C /* vorbisfile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E50DB5811C54313B000B5D4C /* vorbisfile.framework */; };
 		E50DB5A81C543146000B5D4C /* vorbisfile.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E50DB5811C54313B000B5D4C /* vorbisfile.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E50DB5AC1C543348000B5D4C /* configuration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5AB1C543348000B5D4C /* configuration.cpp */; };
+		E50DB5B21C543598000B5D4C /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5B11C543598000B5D4C /* pugixml.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -87,6 +88,9 @@
 		E50DB5811C54313B000B5D4C /* vorbisfile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = vorbisfile.framework; sourceTree = "<group>"; };
 		E50DB5AA1C54333C000B5D4C /* configuration.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = configuration.hpp; sourceTree = "<group>"; };
 		E50DB5AB1C543348000B5D4C /* configuration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = configuration.cpp; sourceTree = "<group>"; };
+		E50DB5AE1C543598000B5D4C /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
+		E50DB5AF1C543598000B5D4C /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
+		E50DB5B11C543598000B5D4C /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				E50DB5741C54313A000B5D4C /* Frameworks */,
+				E50DB5AD1C543598000B5D4C /* include */,
+				E50DB5B01C543598000B5D4C /* src */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
@@ -187,6 +193,25 @@
 			);
 			name = Frameworks;
 			path = ../Dependencies/Mac/Frameworks;
+			sourceTree = "<group>";
+		};
+		E50DB5AD1C543598000B5D4C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				E50DB5AE1C543598000B5D4C /* pugiconfig.hpp */,
+				E50DB5AF1C543598000B5D4C /* pugixml.hpp */,
+			);
+			name = include;
+			path = ../Dependencies/include;
+			sourceTree = "<group>";
+		};
+		E50DB5B01C543598000B5D4C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E50DB5B11C543598000B5D4C /* pugixml.cpp */,
+			);
+			name = src;
+			path = ../Dependencies/src;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +285,7 @@
 			files = (
 				E50DB56F1C542A43000B5D4C /* application.cpp in Sources */,
 				E50DB56C1C54290E000B5D4C /* main.cpp in Sources */,
+				E50DB5B21C543598000B5D4C /* pugixml.cpp in Sources */,
 				E50DB5AC1C543348000B5D4C /* configuration.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,7 +403,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = ../Dependencies/Mac/Frameworks;
-				HEADER_SEARCH_PATHS = ..;
+				HEADER_SEARCH_PATHS = (
+					../Dependencies/include,
+					..,
+				);
 				INFOPLIST_FILE = Mac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xettex.Blip;
@@ -391,7 +420,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = ../Dependencies/Mac/Frameworks;
-				HEADER_SEARCH_PATHS = ..;
+				HEADER_SEARCH_PATHS = (
+					../Dependencies/include,
+					..,
+				);
 				INFOPLIST_FILE = Mac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xettex.Blip;
