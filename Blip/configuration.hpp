@@ -3,10 +3,14 @@
 
 /// \file
 /// \brief Contains the \ref blip::configuration structure interface
+/// \ingroup application
 
 #pragma once
 
 namespace blip {
+
+/// \addtogroup application
+/// \{
 
 /// \brief Contains the user-configurable options for the \ref application
 struct configuration
@@ -21,5 +25,7 @@ struct configuration
     /// \brief Initializes a new instance of the \ref configuration structure
     configuration();
 };
+
+/// \}
 
 }

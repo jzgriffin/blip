@@ -3,6 +3,7 @@
 
 /// \file
 /// \brief Contains the \ref blip::configuration structure implementation
+/// \ingroup application
 
 #include "blip/configuration.hpp"
 #include <SFML/Window/VideoMode.hpp>

@@ -3,6 +3,7 @@
 
 /// \file
 /// \brief Contains the \ref blip::application class implementation
+/// \ingroup application
 
 #include "blip/application.hpp"
 #include <SFML/System/Clock.hpp>

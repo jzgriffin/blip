@@ -3,6 +3,7 @@
 
 /// \file
 /// \brief Contains the \ref blip::application class interface
+/// \ingroup application
 
 #pragma once
 
@@ -10,6 +11,9 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 namespace blip {
+
+/// \addtogroup application
+/// \{
 
 /// \brief Encapsulates the application
 class application
@@ -67,5 +71,7 @@ private:
     /// \brief Draws the application scene
     void draw();
 };
+
+/// \}
 
 }

@@ -1,0 +1,5 @@
+/// \namespace blip
+/// \brief Interface to and implementation of Blip
+
+/// \namespace blip::detail
+/// \brief Implementation details

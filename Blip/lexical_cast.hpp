@@ -3,6 +3,7 @@
 
 /// \file
 /// \brief Contains the \ref blip::lexical_cast function family interface
+/// \ingroup lexical_cast
 
 #pragma once
 
@@ -13,6 +14,9 @@
 namespace blip {
 
 namespace detail {
+
+/// \addtogroup lexical_cast
+/// \{
 
 /// \brief Attempts to lexically cast from a string to another type
 /// \tparam To output value type
@@ -44,7 +48,12 @@ bool try_lexical_cast_from(From const& from, std::string& to)
     return true;
 }
 
+/// \}
+
 }
+
+/// \addtogroup lexical_cast
+/// \{
 
 /// \brief Attempts to lexically cast from one type to another if both types
 /// are the same
@@ -114,5 +123,7 @@ To lexical_cast(From const& from)
     }
     return to;
 }
+
+/// \}
 
 }

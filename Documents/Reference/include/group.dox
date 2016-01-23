@@ -1,0 +1,9 @@
+/// \defgroup application Application
+/// \brief Application functionality
+
+/// \defgroup utility Utility
+/// \brief Utility functionality
+
+/// \defgroup lexical_cast Lexical casting
+/// \brief Lexical casting functionality
+/// \ingroup utility

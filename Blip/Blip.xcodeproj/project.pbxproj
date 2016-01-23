@@ -140,7 +140,6 @@
 			children = (
 				E50DB5711C542A52000B5D4C /* Application */,
 				E50DB56A1C54282F000B5D4C /* Mac */,
-				E50DB56B1C54290E000B5D4C /* main.cpp */,
 				E50DB5B31C5435FA000B5D4C /* Utility */,
 			);
 			name = Blip;
@@ -162,6 +161,7 @@
 				E50DB56D1C542A3D000B5D4C /* application.hpp */,
 				E50DB5AB1C543348000B5D4C /* configuration.cpp */,
 				E50DB5AA1C54333C000B5D4C /* configuration.hpp */,
+				E50DB56B1C54290E000B5D4C /* main.cpp */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -235,6 +235,7 @@
 				E50DB5531C5427FB000B5D4C /* Frameworks */,
 				E50DB5541C5427FB000B5D4C /* Resources */,
 				E50DB5A91C543147000B5D4C /* Embed Frameworks */,
+				E50DB5B51C543FD0000B5D4C /* Build Documentation */,
 			);
 			buildRules = (
 			);
@@ -287,6 +288,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E50DB5B51C543FD0000B5D4C /* Build Documentation */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Documentation";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd ../Documents/Reference; doxygen";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E50DB5521C5427FB000B5D4C /* Sources */ = {
