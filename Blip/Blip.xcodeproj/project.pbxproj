@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E50DB5601C5427FB000B5D4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E50DB55F1C5427FB000B5D4C /* Assets.xcassets */; };
 		E50DB56C1C54290E000B5D4C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB56B1C54290E000B5D4C /* main.cpp */; };
+		E50DB56F1C542A43000B5D4C /* application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB56E1C542A43000B5D4C /* application.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,8 @@
 		E50DB55F1C5427FB000B5D4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E50DB5641C5427FB000B5D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E50DB56B1C54290E000B5D4C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E50DB56D1C542A3D000B5D4C /* application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = application.hpp; sourceTree = "<group>"; };
+		E50DB56E1C542A43000B5D4C /* application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = application.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +51,7 @@
 		E50DB5581C5427FB000B5D4C /* Blip */ = {
 			isa = PBXGroup;
 			children = (
+				E50DB5711C542A52000B5D4C /* Application */,
 				E50DB56A1C54282F000B5D4C /* Mac */,
 				E50DB56B1C54290E000B5D4C /* main.cpp */,
 			);
@@ -61,6 +65,15 @@
 				E50DB5641C5427FB000B5D4C /* Info.plist */,
 			);
 			path = Mac;
+			sourceTree = "<group>";
+		};
+		E50DB5711C542A52000B5D4C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				E50DB56E1C542A43000B5D4C /* application.cpp */,
+				E50DB56D1C542A3D000B5D4C /* application.hpp */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E50DB56F1C542A43000B5D4C /* application.cpp in Sources */,
 				E50DB56C1C54290E000B5D4C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +261,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = ..;
 				INFOPLIST_FILE = Mac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xettex.Blip;
@@ -259,6 +274,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				HEADER_SEARCH_PATHS = ..;
 				INFOPLIST_FILE = Mac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xettex.Blip;
