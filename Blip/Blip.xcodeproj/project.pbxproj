@@ -91,6 +91,7 @@
 		E50DB5AE1C543598000B5D4C /* pugiconfig.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugiconfig.hpp; sourceTree = "<group>"; };
 		E50DB5AF1C543598000B5D4C /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
 		E50DB5B11C543598000B5D4C /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
+		E50DB5B41C543693000B5D4C /* lexical_cast.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lexical_cast.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +141,7 @@
 				E50DB5711C542A52000B5D4C /* Application */,
 				E50DB56A1C54282F000B5D4C /* Mac */,
 				E50DB56B1C54290E000B5D4C /* main.cpp */,
+				E50DB5B31C5435FA000B5D4C /* Utility */,
 			);
 			name = Blip;
 			sourceTree = "<group>";
@@ -212,6 +214,14 @@
 			);
 			name = src;
 			path = ../Dependencies/src;
+			sourceTree = "<group>";
+		};
+		E50DB5B31C5435FA000B5D4C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E50DB5B41C543693000B5D4C /* lexical_cast.hpp */,
+			);
+			name = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
