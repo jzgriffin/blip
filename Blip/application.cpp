@@ -12,7 +12,14 @@ namespace blip {
 
 application::application()
 {
-    _window.create({1280, 720}, "Blip");
+    sf::VideoMode video_mode{_config.width, _config.height, _config.depth};
+    auto window_style = _config.is_full_screen
+        ? sf::Style::Fullscreen
+        : sf::Style::Default;
+    sf::ContextSettings context_settings;
+    context_settings.antialiasingLevel = _config.antialiasing_level;
+    _window.create(video_mode, "Blip", window_style, context_settings);
+    _window.setVerticalSyncEnabled(_config.use_vertical_sync);
 }
 
 void application::exit(int exit_code) noexcept

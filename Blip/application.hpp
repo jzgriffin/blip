@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "blip/configuration.hpp"
 #include <SFML/Graphics/RenderWindow.hpp>
 
 namespace blip {
@@ -39,6 +40,10 @@ public:
     /// \return application exit status
     int run();
 
+    /// \brief Gets a reference to the application configuration
+    /// \return application configuration
+    configuration& config() noexcept { return _config; }
+
     /// \brief Gets a reference to the rendering window
     /// \return rendering window
     sf::RenderWindow& window() noexcept { return _window; }
@@ -46,6 +51,8 @@ public:
 private:
     bool _is_running{false}; //!< Whether the application is running
     int _exit_code{0}; //!< Application exit status
+
+    configuration _config; //!< Application configuration
 
     sf::RenderWindow _window; //!< Rendering window
 
