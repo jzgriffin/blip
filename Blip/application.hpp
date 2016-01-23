@@ -6,12 +6,23 @@
 
 #pragma once
 
+#include <SFML/Graphics/RenderWindow.hpp>
+
 namespace blip {
 
 /// \brief Encapsulates the application
 class application
 {
 public:
+    /// \brief Initializes a new instance of the \ref application class
+    application();
+
+    /// \brief Deleted copy constructor
+    application(application const&) = delete;
+
+    /// \brief Deleted copy assignment operator
+    application& operator=(application const&) = delete;
+
     /// \brief Gets a value indicating whether the application is running
     /// \return whether the application is running
     bool is_running() const noexcept { return _is_running; }
@@ -28,9 +39,26 @@ public:
     /// \return application exit status
     int run();
 
+    /// \brief Gets a reference to the rendering window
+    /// \return rendering window
+    sf::RenderWindow& window() noexcept { return _window; }
+
 private:
     bool _is_running{false}; //!< Whether the application is running
     int _exit_code{0}; //!< Application exit status
+
+    sf::RenderWindow _window; //!< Rendering window
+
+    /// \brief Notifies the application of an event
+    /// \param event event to notify of
+    void notify(sf::Event const& event);
+
+    /// \brief Updates the application state by a time step
+    /// \param time_step time step to update by
+    void update(float time_step);
+
+    /// \brief Draws the application scene
+    void draw();
 };
 
 }
