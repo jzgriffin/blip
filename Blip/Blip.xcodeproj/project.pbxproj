@@ -92,6 +92,9 @@
 		E50DB5AF1C543598000B5D4C /* pugixml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = pugixml.hpp; sourceTree = "<group>"; };
 		E50DB5B11C543598000B5D4C /* pugixml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = pugixml.cpp; sourceTree = "<group>"; };
 		E50DB5B41C543693000B5D4C /* lexical_cast.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = lexical_cast.hpp; sourceTree = "<group>"; };
+		E50DB5B71C544C0E000B5D4C /* xml_serializer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = xml_serializer.hpp; sourceTree = "<group>"; };
+		E50DB5B81C545426000B5D4C /* xml_deserializer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = xml_deserializer.hpp; sourceTree = "<group>"; };
+		E50DB5B91C545485000B5D4C /* xml_converter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = xml_converter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,9 +222,20 @@
 		E50DB5B31C5435FA000B5D4C /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				E50DB5B61C5440FB000B5D4C /* XML */,
 				E50DB5B41C543693000B5D4C /* lexical_cast.hpp */,
 			);
 			name = Utility;
+			sourceTree = "<group>";
+		};
+		E50DB5B61C5440FB000B5D4C /* XML */ = {
+			isa = PBXGroup;
+			children = (
+				E50DB5B91C545485000B5D4C /* xml_converter.hpp */,
+				E50DB5B81C545426000B5D4C /* xml_deserializer.hpp */,
+				E50DB5B71C544C0E000B5D4C /* xml_serializer.hpp */,
+			);
+			name = XML;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
