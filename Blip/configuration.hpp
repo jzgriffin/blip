@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include "blip/xml_converter.hpp"
+
 namespace blip {
 
 /// \addtogroup application
@@ -24,6 +26,30 @@ struct configuration
 
     /// \brief Initializes a new instance of the \ref configuration structure
     configuration();
+};
+
+/// \}
+
+/// \addtogroup xml
+/// \{
+
+/// \brief Specifies XML conversion functions for \ref configuration
+template <>
+struct xml_converter<configuration>
+{
+    /// \brief Deserializes from a \ref xml_deserializer to a
+    /// \ref configuration instance
+    /// \param dx deserializer to input from
+    /// \param t configuration to input to
+    /// \return whether the deserialization was successful
+    static bool deserialize(xml_deserializer& dx, configuration& t);
+
+    /// \brief Serializes from a \ref configuration instance to a \ref
+    /// \ref xml_serializer
+    /// \param sx serializer to output to
+    /// \param t configuration to output from
+    /// \return whether the serialization was successful
+    static bool serialize(xml_serializer& sx, configuration const& t);
 };
 
 /// \}
