@@ -84,9 +84,10 @@ struct xml_deserializer
     /// \brief Gets a deserializable child from the node
     /// \tparam T type of value
     /// \tparam Converter type of converter to use
-    /// \tparam Args additional arguments for converter
-    /// \param name name of the child
+    /// \tparam Args types of additional arguments for converter
+    /// \param ch child to deserialize
     /// \param val where to store the value
+    /// \param args additional arguments for converter
     /// \return whether the child was deserialized
     /// \see xml_converter
     template <
@@ -105,9 +106,10 @@ struct xml_deserializer
     /// \brief Gets a deserializable child from the node
     /// \tparam T type of value
     /// \tparam Converter type of converter to use
-    /// \tparam Args additional arguments for converter
+    /// \tparam Args types of additional arguments for converter
     /// \param name name of the child
     /// \param val where to store the value
+    /// \param args additional arguments for the converter
     /// \return whether the child was deserialized
     /// \see xml_converter
     template <

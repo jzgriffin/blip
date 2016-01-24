@@ -78,9 +78,10 @@ struct xml_serializer
     /// \brief Appends a serializable value to the node
     /// \tparam T type of value
     /// \tparam Converter type of converter to use
-    /// \tparam Args additional arguments for converter
+    /// \tparam Args types of additional arguments for converter
     /// \param name name of the child
     /// \param val value to give the child
+    /// \param args additional arguments for converter
     /// \return whether the child was serialized
     /// \see xml_serializable
     template <
