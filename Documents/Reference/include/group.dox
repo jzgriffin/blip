@@ -1,6 +1,9 @@
 /// \defgroup application Application
 /// \brief Application functionality
 
+/// \defgroup resource Resource
+/// \brief Resource management
+
 /// \defgroup utility Utility
 /// \brief Utility functionality
 

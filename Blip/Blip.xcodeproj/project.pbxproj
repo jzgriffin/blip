@@ -40,6 +40,8 @@
 		E50DB5B21C543598000B5D4C /* pugixml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5B11C543598000B5D4C /* pugixml.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		E50DB5BC1C556D3D000B5D4C /* path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5BB1C556D3D000B5D4C /* path.cpp */; };
 		E50DB5BE1C55B605000B5D4C /* platform_path.mm in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5BD1C55B605000B5D4C /* platform_path.mm */; };
+		E50DB5C21C55BB8B000B5D4C /* resource_cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5C11C55BB8B000B5D4C /* resource_cache.cpp */; };
+		E50DB5C51C55BB9A000B5D4C /* resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5C41C55BB9A000B5D4C /* resource_manager.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -100,6 +102,10 @@
 		E50DB5BA1C556B4A000B5D4C /* path.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = path.hpp; sourceTree = "<group>"; };
 		E50DB5BB1C556D3D000B5D4C /* path.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = path.cpp; sourceTree = "<group>"; };
 		E50DB5BD1C55B605000B5D4C /* platform_path.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = platform_path.mm; sourceTree = "<group>"; };
+		E50DB5C01C55BB84000B5D4C /* resource_cache.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = resource_cache.hpp; sourceTree = "<group>"; };
+		E50DB5C11C55BB8B000B5D4C /* resource_cache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resource_cache.cpp; sourceTree = "<group>"; };
+		E50DB5C31C55BB92000B5D4C /* resource_manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = resource_manager.hpp; sourceTree = "<group>"; };
+		E50DB5C41C55BB9A000B5D4C /* resource_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resource_manager.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +154,7 @@
 			children = (
 				E50DB5711C542A52000B5D4C /* Application */,
 				E50DB56A1C54282F000B5D4C /* Mac */,
+				E50DB5BF1C55BB67000B5D4C /* Resource */,
 				E50DB5B31C5435FA000B5D4C /* Utility */,
 			);
 			name = Blip;
@@ -246,6 +253,17 @@
 			name = XML;
 			sourceTree = "<group>";
 		};
+		E50DB5BF1C55BB67000B5D4C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E50DB5C11C55BB8B000B5D4C /* resource_cache.cpp */,
+				E50DB5C01C55BB84000B5D4C /* resource_cache.hpp */,
+				E50DB5C41C55BB9A000B5D4C /* resource_manager.cpp */,
+				E50DB5C31C55BB92000B5D4C /* resource_manager.hpp */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -338,7 +356,9 @@
 				E50DB56C1C54290E000B5D4C /* main.cpp in Sources */,
 				E50DB5B21C543598000B5D4C /* pugixml.cpp in Sources */,
 				E50DB5BC1C556D3D000B5D4C /* path.cpp in Sources */,
+				E50DB5C21C55BB8B000B5D4C /* resource_cache.cpp in Sources */,
 				E50DB5AC1C543348000B5D4C /* configuration.cpp in Sources */,
+				E50DB5C51C55BB9A000B5D4C /* resource_manager.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
