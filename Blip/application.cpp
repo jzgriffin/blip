@@ -16,6 +16,7 @@
 namespace blip {
 
 application::application()
+    : _resource_mgr{find_system_path(system_path::resources_path)}
 {
     _config_path = join_path({find_system_path(system_path::preferences_path),
         company, product});

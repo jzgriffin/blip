@@ -8,6 +8,7 @@
 #pragma once
 
 #include "blip/configuration.hpp"
+#include "blip/resource_manager.hpp"
 #include <SFML/Graphics/RenderWindow.hpp>
 
 namespace blip {
@@ -50,6 +51,10 @@ public:
     /// \return application exit status
     int run();
 
+    /// \brief Gets a reference to the resource manager
+    /// \return resource manager
+    resource_manager& resource_mgr() noexcept { return _resource_mgr; }
+
     /// \brief Gets a reference to the application configuration
     /// \return application configuration
     configuration& config() noexcept { return _config; }
@@ -62,6 +67,7 @@ private:
     bool _is_running{false}; //!< Whether the application is running
     int _exit_code{0}; //!< Application exit status
 
+    resource_manager _resource_mgr; //!< Resource manager
     std::string _config_path; //!< Application configuration file path
     configuration _config; //!< Application configuration
 
