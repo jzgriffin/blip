@@ -83,6 +83,9 @@ private:
 
     /// \brief Draws the application scene
     void draw();
+
+    /// \brief Adds caches for common resource types to the resource manager
+    void add_resource_caches();
 };
 
 /// \}
