@@ -28,6 +28,9 @@ public:
     /// \brief Deleted copy constructor
     application(application const&) = delete;
 
+    /// \brief Destructs the \ref application instance
+    ~application();
+
     /// \brief Deleted copy assignment operator
     application& operator=(application const&) = delete;
 
@@ -59,6 +62,7 @@ private:
     bool _is_running{false}; //!< Whether the application is running
     int _exit_code{0}; //!< Application exit status
 
+    std::string _config_path; //!< Application configuration file path
     configuration _config; //!< Application configuration
 
     sf::RenderWindow _window; //!< Rendering window
