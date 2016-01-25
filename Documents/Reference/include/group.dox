@@ -8,6 +8,10 @@
 /// \brief Lexical casting functionality
 /// \ingroup utility
 
+/// \defgroup path Path
+/// \brief Path manipulation functionality
+/// \ingroup utility
+
 /// \defgroup xml XML
 /// \brief XML serialization and deserialization
 /// \ingroup utility
