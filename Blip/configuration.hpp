@@ -44,7 +44,7 @@ struct xml_converter<configuration>
     /// \return whether the deserialization was successful
     static bool deserialize(xml_deserializer& dx, configuration& t);
 
-    /// \brief Serializes from a \ref configuration instance to a \ref
+    /// \brief Serializes from a \ref configuration instance to a
     /// \ref xml_serializer
     /// \param sx serializer to output to
     /// \param t configuration to output from
