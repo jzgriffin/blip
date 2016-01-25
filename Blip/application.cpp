@@ -19,7 +19,7 @@ application::application()
         : sf::Style::Default;
     sf::ContextSettings context_settings;
     context_settings.antialiasingLevel = _config.antialiasing_level;
-    _window.create(video_mode, "Blip", window_style, context_settings);
+    _window.create(video_mode, product, window_style, context_settings);
     _window.setVerticalSyncEnabled(_config.use_vertical_sync);
 }
 

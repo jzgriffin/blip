@@ -19,6 +19,9 @@ namespace blip {
 class application
 {
 public:
+    static constexpr char const* company = "Xettex"; //!< Company name
+    static constexpr char const* product = "Blip"; //!< Product name
+
     /// \brief Initializes a new instance of the \ref application class
     application();
 
