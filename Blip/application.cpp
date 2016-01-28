@@ -20,22 +20,12 @@
 namespace blip {
 
 application::application()
-    : _resource_mgr{find_system_path(system_path::resources_path)}
+    : _resource_mgr{join_path({
+        find_system_path(system_path::resources_path), "Resources"})}
 {
     add_resource_caches();
-
-    _config_path = join_path({find_system_path(system_path::preferences_path),
-        company, product});
-    if (!create_directory(_config_path)) {
-        throw std::runtime_error{"unable to create preferences directory"};
-    }
-    _config_path = join_path({_config_path, "Application.xml"});
-
-    pugi::xml_document doc;
-    if (doc.load_file(_config_path.c_str())) {
-        xml_deserializer dx{doc};
-        dx.child("Configuration", _config);
-    }
+    load_input_spec();
+    load_config();
 
     sf::VideoMode video_mode{_config.width, _config.height, _config.depth};
     auto window_style = _config.is_full_screen
@@ -49,11 +39,7 @@ application::application()
 
 application::~application()
 {
-    pugi::xml_document doc;
-    xml_serializer sx{doc};
-    if (sx.child("Configuration", _config)) {
-        doc.save_file(_config_path.c_str());
-    }
+    save_config();
 }
 
 void application::exit(int exit_code) noexcept
@@ -164,6 +150,61 @@ void application::add_resource_caches()
             }
             return ptr;
         }));
+}
+
+void application::load_input_spec()
+{
+    pugi::xml_document doc;
+    auto path = _resource_mgr.path_to(join_path(
+        {"Configurations", "InputSpecification.xml"}));
+    if (!doc.load_file(path.c_str())) {
+        throw std::runtime_error{"unable to load input specification"};
+    }
+
+    xml_deserializer dx{doc};
+    if (!dx.child("InputSpecification", _input_spec)) {
+        throw std::runtime_error{"unable to load input specification"};
+    }
+}
+
+void application::load_config()
+{
+    _config_path = join_path({find_system_path(system_path::preferences_path),
+        company, product});
+    if (!create_directory(_config_path)) {
+        throw std::runtime_error{"unable to create preferences directory"};
+    }
+    _config_path = join_path({_config_path, "Application.xml"});
+
+    pugi::xml_document doc;
+    if (doc.load_file(_config_path.c_str())) {
+        xml_deserializer dx{doc.child("Application")};
+        if (dx) {
+            dx.child("Configuration", _config);
+            dx.child("InputMap", _input_map, _input_spec);
+        }
+    }
+
+    if (_input_map.contexts.empty()) {
+        auto path = _resource_mgr.path_to(join_path(
+            {"Configurations", "InputMap.xml"}));
+        if (doc.load_file(path.c_str())) {
+            xml_deserializer{doc}.child("InputMap", _input_map, _input_spec);
+        }
+    }
+
+    if (_input_map.contexts.empty()) {
+        throw std::runtime_error{"unable to load input map"};
+    }
+}
+
+void application::save_config() const
+{
+    pugi::xml_document doc;
+    xml_serializer sx{doc.append_child("Application")};
+    sx.child("Configuration", _config);
+    sx.child("InputMap", _input_map);
+    doc.save_file(_config_path.c_str());
 }
 
 }

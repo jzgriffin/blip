@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<InputSpecification>
+    <ActionContext Name="Menu">
+        <Action Name="TargetLeft" Signal="Digital" />
+        <Action Name="TargetRight" Signal="Digital" />
+        <Action Name="TargetUp" Signal="Digital" />
+        <Action Name="TargetDown" Signal="Digital" />
+        <Action Name="Select" Signal="Digital" />
+        <Action Name="Cancel" Signal="Digital" />
+    </ActionContext>
+    <ActionContext Name="Game">
+        <Action Name="MoveHorizontal" Signal="Analog" />
+        <Action Name="MoveLeft" Signal="Digital" />
+        <Action Name="MoveRight" Signal="Digital" />
+        <Action Name="Jump" Signal="Digital" />
+        <Action Name="Blip" Signal="Digital" />
+        <Action Name="Sprint" Signal="Digital" />
+        <Action Name="Walk" Signal="Digital" />
+        <Action Name="Rush" Signal="Digital" />
+        <Action Name="Pause" Signal="Digital" />
+        <Action Name="LookLeft" Signal="Digital" />
+        <Action Name="LookRight" Signal="Digital" />
+    </ActionContext>
+</InputSpecification>

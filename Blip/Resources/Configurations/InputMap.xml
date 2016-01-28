@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<InputMap>
+    <BindingContext ActionContext="Menu" Action="TargetLeft">
+        <Binding Device="Keyboard" Code="0" />
+    </BindingContext>
+    <BindingContext ActionContext="Menu" Action="TargetRight">
+        <Binding Device="Keyboard" Code="3" />
+    </BindingContext>
+    <BindingContext ActionContext="Menu" Action="TargetUp">
+        <Binding Device="Keyboard" Code="22" />
+    </BindingContext>
+    <BindingContext ActionContext="Menu" Action="TargetDown">
+        <Binding Device="Keyboard" Code="18" />
+    </BindingContext>
+    <BindingContext ActionContext="Menu" Action="Select">
+        <Binding Device="Keyboard" Code="57" />
+    </BindingContext>
+    <BindingContext ActionContext="Menu" Action="Cancel">
+        <Binding Device="Keyboard" Code="36" />
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="MoveHorizontal">
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="MoveLeft">
+        <Binding Device="Keyboard" Code="0" />
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="MoveRight">
+        <Binding Device="Keyboard" Code="3" />
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="Jump">
+        <Binding Device="Keyboard" Code="57" />
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="Blip">
+        <Binding Device="Keyboard" Code="14" />
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="Sprint">
+        <Binding Device="Keyboard" Code="38" />
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="Walk">
+        <Binding Device="Keyboard" Code="37" />
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="Rush">
+        <Binding Device="Keyboard" Code="15" />
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="Pause">
+        <Binding Device="Keyboard" Code="36" />
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="LookLeft">
+        <Binding Device="Keyboard" Code="16" />
+    </BindingContext>
+    <BindingContext ActionContext="Game" Action="LookRight">
+        <Binding Device="Keyboard" Code="4" />
+    </BindingContext>
+</InputMap>

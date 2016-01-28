@@ -8,6 +8,8 @@
 #pragma once
 
 #include "blip/configuration.hpp"
+#include "blip/input_map.hpp"
+#include "blip/input_specification.hpp"
 #include "blip/resource_manager.hpp"
 #include <SFML/Graphics/RenderWindow.hpp>
 
@@ -55,9 +57,17 @@ public:
     /// \return resource manager
     resource_manager& resource_mgr() noexcept { return _resource_mgr; }
 
+    /// \brief Gets a reference to the input specification
+    /// \return input specification
+    input_specification& input_spec() noexcept { return _input_spec; }
+
     /// \brief Gets a reference to the application configuration
     /// \return application configuration
     configuration& config() noexcept { return _config; }
+
+    /// \brief Gets a reference to the input map
+    /// \return input map
+    input_map& input_map() noexcept { return _input_map; }
 
     /// \brief Gets a reference to the rendering window
     /// \return rendering window
@@ -68,8 +78,11 @@ private:
     int _exit_code{0}; //!< Application exit status
 
     resource_manager _resource_mgr; //!< Resource manager
+    input_specification _input_spec; //!< Input specification
+
     std::string _config_path; //!< Application configuration file path
     configuration _config; //!< Application configuration
+    struct input_map _input_map; //!< Input map
 
     sf::RenderWindow _window; //!< Rendering window
 
@@ -86,6 +99,15 @@ private:
 
     /// \brief Adds caches for common resource types to the resource manager
     void add_resource_caches();
+
+    /// \brief Loads the input specification
+    void load_input_spec();
+
+    /// \brief Loads the application configuration
+    void load_config();
+
+    /// \brief Saves the application configuration
+    void save_config() const;
 };
 
 /// \}
