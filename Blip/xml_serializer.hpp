@@ -42,7 +42,7 @@ struct xml_serializer
     template <typename T>
     bool data(char const* name, T const& val)
     {
-        auto ch = node.append_child(name).append_child(pugi::node_cdata);
+        auto ch = node.append_child(name).append_child(pugi::node_pcdata);
         if (!ch) {
             return false;
         }
