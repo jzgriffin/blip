@@ -34,8 +34,8 @@ bool xml_converter<configuration>::deserialize(
 }
 
 bool xml_converter<configuration>::serialize(
-    blip::xml_serializer& sx,
-    blip::configuration const& t)
+    xml_serializer& sx,
+    configuration const& t)
 {
     sx.data("Width", t.width);
     sx.data("Height", t.height);

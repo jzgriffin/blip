@@ -37,17 +37,15 @@ struct configuration
 template <>
 struct xml_converter<configuration>
 {
-    /// \brief Deserializes from a \ref xml_deserializer to a
-    /// \ref configuration instance
+    /// \brief Deserializes a \ref configuration from a \ref xml_deserializer
     /// \param dx deserializer to input from
-    /// \param t configuration to input to
+    /// \param t configuration to input
     /// \return whether the deserialization was successful
     static bool deserialize(xml_deserializer& dx, configuration& t);
 
-    /// \brief Serializes from a \ref configuration instance to a
-    /// \ref xml_serializer
+    /// \brief Serializes a \ref configuration to a \ref xml_serializer
     /// \param sx serializer to output to
-    /// \param t configuration to output from
+    /// \param t configuration to output
     /// \return whether the serialization was successful
     static bool serialize(xml_serializer& sx, configuration const& t);
 };
