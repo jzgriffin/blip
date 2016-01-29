@@ -16,6 +16,9 @@ namespace blip {
 class updatable
 {
 public:
+    /// \brief Destructs the \ref updatable instance
+    virtual ~updatable();
+
     /// \brief Updates the object state by a time step
     /// \param time_step time step to update by
     virtual void update(float time_step) = 0;

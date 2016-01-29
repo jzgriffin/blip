@@ -23,6 +23,9 @@ namespace blip {
 class notifiable
 {
 public:
+    /// \brief Destructs the \ref notifiable instance
+    virtual ~notifiable();
+
     /// \brief Notifies the object of an event
     /// \param event event to notify of
     virtual bool notify(sf::Event const& event) = 0;
