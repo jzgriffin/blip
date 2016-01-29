@@ -596,6 +596,7 @@
 				E50DB5691C5427FB000B5D4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
