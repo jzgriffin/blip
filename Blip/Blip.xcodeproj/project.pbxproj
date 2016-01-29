@@ -134,6 +134,7 @@
 		E50DB5C41C55BB9A000B5D4C /* resource_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resource_manager.cpp; sourceTree = "<group>"; };
 		E5FBBCC21C598FBE00BDF5D7 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		E5FBBCCE1C5B1F4400BDF5D7 /* notifiable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = notifiable.hpp; sourceTree = "<group>"; };
+		E5FBBCCF1C5B1F4E00BDF5D7 /* updatable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = updatable.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				E5FBBCCE1C5B1F4400BDF5D7 /* notifiable.hpp */,
+				E5FBBCCF1C5B1F4E00BDF5D7 /* updatable.hpp */,
 			);
 			name = Virtual;
 			sourceTree = "<group>";
