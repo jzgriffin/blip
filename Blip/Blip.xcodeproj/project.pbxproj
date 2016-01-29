@@ -133,6 +133,7 @@
 		E50DB5C31C55BB92000B5D4C /* resource_manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = resource_manager.hpp; sourceTree = "<group>"; };
 		E50DB5C41C55BB9A000B5D4C /* resource_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resource_manager.cpp; sourceTree = "<group>"; };
 		E5FBBCC21C598FBE00BDF5D7 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		E5FBBCCE1C5B1F4400BDF5D7 /* notifiable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = notifiable.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +210,7 @@
 				E50DB5BF1C55BB67000B5D4C /* Resource */,
 				E5FBBCC21C598FBE00BDF5D7 /* Resources */,
 				E50DB5B31C5435FA000B5D4C /* Utility */,
+				E5FBBCCD1C5B1F2000BDF5D7 /* Virtual */,
 			);
 			name = Blip;
 			sourceTree = "<group>";
@@ -315,6 +317,14 @@
 				E50DB5C31C55BB92000B5D4C /* resource_manager.hpp */,
 			);
 			name = Resource;
+			sourceTree = "<group>";
+		};
+		E5FBBCCD1C5B1F2000BDF5D7 /* Virtual */ = {
+			isa = PBXGroup;
+			children = (
+				E5FBBCCE1C5B1F4400BDF5D7 /* notifiable.hpp */,
+			);
+			name = Virtual;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

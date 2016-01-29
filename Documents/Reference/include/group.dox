@@ -7,6 +7,9 @@
 /// \defgroup resource Resource
 /// \brief Resource management
 
+/// \defgroup virtual Virtual
+/// \brief Abstract or interface types
+
 /// \defgroup utility Utility
 /// \brief Utility functionality
 
