@@ -28,6 +28,10 @@
 /// \brief Path manipulation functionality
 /// \ingroup utility
 
+/// \defgroup string String
+/// \brief String manipulation functionality
+/// \ingroup utility
+
 /// \defgroup xml XML
 /// \brief XML serialization and deserialization
 /// \ingroup utility
