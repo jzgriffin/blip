@@ -1,2 +1,8 @@
+.vs/
 Documents/Reference/Output/
+bin/
+obj/
 xcuserdata/
+*.db
+*.opendb
+*.user

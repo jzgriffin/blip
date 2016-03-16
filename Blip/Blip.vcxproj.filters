@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Application">
+      <UniqueIdentifier>{5987d8c0-ff74-4403-9a18-249430049d7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{958b9165-1c66-4904-8dd6-8d1817b39c68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Windows">
+      <UniqueIdentifier>{ab969475-fa30-4368-9d1e-c3afa9233a08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{7bd44be9-586e-4631-ae97-8bc65f34cd7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="State">
+      <UniqueIdentifier>{132a5131-f17d-4f37-a4fc-16d09a93e425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{04600ed7-51f0-469c-89b0-017609fd105c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Virtual">
+      <UniqueIdentifier>{a5778c67-7b15-42ad-9248-c70ec7358acc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility\XML">
+      <UniqueIdentifier>{693bd7c2-8d5d-4b5e-b3f0-6536d0d5784c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="State\States">
+      <UniqueIdentifier>{f2dbda01-16a8-46e6-ae28-75297616f0f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies">
+      <UniqueIdentifier>{4a805478-9366-461d-8647-b1d2ea309e01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\include">
+      <UniqueIdentifier>{102ce145-27f1-484b-81d6-0350b3f77871}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dependencies\src">
+      <UniqueIdentifier>{b37f8f3f-a2a6-4317-aec0-91ef9547b61f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="application.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="input_action.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="input_action_context.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="input_activation.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="input_binding.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="input_binding_context.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="input_map.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="input_signal.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="input_specification.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="configuration.cpp">
+      <Filter>Application</Filter>
+    </ClCompile>
+    <ClCompile Include="notifiable.cpp">
+      <Filter>Virtual</Filter>
+    </ClCompile>
+    <ClCompile Include="updatable.cpp">
+      <Filter>Virtual</Filter>
+    </ClCompile>
+    <ClCompile Include="path.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="state.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="state_manager.cpp">
+      <Filter>State</Filter>
+    </ClCompile>
+    <ClCompile Include="resource_cache.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="resource_manager.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="Windows\platform_path.cpp">
+      <Filter>Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="string.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\src\pugixml.cpp">
+      <Filter>Dependencies\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="application.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="input_action.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="input_action_context.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="input_activation.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="input_binding.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="input_binding_context.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="input_event.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="input_map.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="input_signal.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="input_specification.hpp">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="configuration.hpp">
+      <Filter>Application</Filter>
+    </ClInclude>
+    <ClInclude Include="notifiable.hpp">
+      <Filter>Virtual</Filter>
+    </ClInclude>
+    <ClInclude Include="updatable.hpp">
+      <Filter>Virtual</Filter>
+    </ClInclude>
+    <ClInclude Include="iterator.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="lexical_cast.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="path.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="xml_converter.hpp">
+      <Filter>Utility\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="xml_deserializer.hpp">
+      <Filter>Utility\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="xml_serializer.hpp">
+      <Filter>Utility\XML</Filter>
+    </ClInclude>
+    <ClInclude Include="state.hpp">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="state_manager.hpp">
+      <Filter>State</Filter>
+    </ClInclude>
+    <ClInclude Include="resource_cache.hpp">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="resource_manager.hpp">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="string.hpp">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\pugiconfig.hpp">
+      <Filter>Dependencies\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\include\pugixml.hpp">
+      <Filter>Dependencies\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
