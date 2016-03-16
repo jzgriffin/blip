@@ -28,6 +28,7 @@ public:
 
     /// \brief Notifies the object of an event
     /// \param event event to notify of
+    /// \return whether or not the event was intercepted
     virtual bool notify(sf::Event const& event) = 0;
 };
 
