@@ -108,6 +108,9 @@ state_manager::job::~job() = default;
 
 void state_manager::push_front_job::apply(state_manager& mgr)
 {
+    // When pushing onto the front, we must toggle off the pushed state
+    // depending on the states behind it
+
     auto dbn = false;
     auto dbu = false;
     auto dbd = false;
@@ -141,6 +144,9 @@ void state_manager::push_front_job::apply(state_manager& mgr)
 
 void state_manager::push_back_job::apply(state_manager& mgr)
 {
+    // When pushing onto the back, we must toggle off the states in front of
+    // the back depending on the pushed state
+
     ptr->focus();
     ptr->enable();
     ptr->show();
@@ -165,11 +171,16 @@ void state_manager::push_back_job::apply(state_manager& mgr)
 
 void state_manager::pop_front_job::apply(state_manager& mgr)
 {
+    // When popping off of the front, we don't have to toggle anything
+
     mgr._list.pop_front();
 }
 
 void state_manager::pop_back_job::apply(state_manager& mgr)
 {
+    // When popping off of the back, we must toggle on the states in front of
+    // the back depending on the popped state
+
     auto ptr = mgr._list.back().get();
     auto dbn = does_block_notify(ptr->type);
     auto dbu = does_block_update(ptr->type);
