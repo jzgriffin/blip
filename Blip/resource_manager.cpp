@@ -42,8 +42,7 @@ bool resource_manager::remove_cache(std::type_index const& type)
     return true;
 }
 
-resource_cache* resource_manager::cache_for(std::type_index const& type)
-    const
+resource_cache* resource_manager::cache_for(std::type_index const& type) const
 {
     auto iter = _caches.find(type);
     if (iter == std::end(_caches)) {
