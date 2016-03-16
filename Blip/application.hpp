@@ -11,6 +11,7 @@
 #include "blip/input_map.hpp"
 #include "blip/input_specification.hpp"
 #include "blip/resource_manager.hpp"
+#include "blip/state_manager.hpp"
 #include <SFML/Graphics/RenderWindow.hpp>
 
 namespace blip {
@@ -69,6 +70,10 @@ public:
     /// \return input map
     input_map& input_map() noexcept { return _input_map; }
 
+    /// \brief Gets a reference to the state manager
+    /// \return state manager
+    state_manager& state_mgr() noexcept { return _state_mgr; }
+
     /// \brief Gets a reference to the rendering window
     /// \return rendering window
     sf::RenderWindow& window() noexcept { return _window; }
@@ -83,6 +88,8 @@ private:
     std::string _config_path; //!< Application configuration file path
     configuration _config; //!< Application configuration
     struct input_map _input_map; //!< Input map
+
+    state_manager _state_mgr; //!< State manager
 
     sf::RenderWindow _window; //!< Rendering window
 

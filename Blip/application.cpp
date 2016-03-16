@@ -55,6 +55,12 @@ int application::run()
 
     _is_running = true;
     while (_is_running) {
+        _state_mgr.work();
+
+        // After working on the state manager, we must lock in order to
+        // perform notifications/updates/draws
+        std::lock_guard<decltype(_state_mgr.mutex)> lock{_state_mgr.mutex};
+        
         sf::Event event;
         while (_window.pollEvent(event)) {
             notify(event);
@@ -69,6 +75,10 @@ int application::run()
 
 void application::notify(sf::Event const& event)
 {
+    if (_state_mgr.notify(event)) {
+        return;
+    }
+
     switch (event.type) {
         case sf::Event::Closed:
             exit();
@@ -79,13 +89,15 @@ void application::notify(sf::Event const& event)
     }
 }
 
-void application::update(float)
+void application::update(float time_step)
 {
+    _state_mgr.update(time_step);
 }
 
 void application::draw()
 {
     _window.clear();
+    _window.draw(_state_mgr);
     _window.display();
 }
 
