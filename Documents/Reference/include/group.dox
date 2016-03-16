@@ -13,6 +13,10 @@
 /// \defgroup utility Utility
 /// \brief Utility functionality
 
+/// \defgroup iterator Iterator
+/// \brief Iterator functionality
+/// \ingroup utility
+
 /// \defgroup lexical_cast Lexical casting
 /// \brief Lexical casting functionality
 /// \ingroup utility
