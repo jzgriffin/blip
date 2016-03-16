@@ -10,6 +10,9 @@
 /// \defgroup virtual Virtual
 /// \brief Abstract or interface types
 
+/// \defgroup state State
+/// \brief Game state functionality
+
 /// \defgroup utility Utility
 /// \brief Utility functionality
 

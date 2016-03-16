@@ -51,6 +51,8 @@
 		E50DB5C21C55BB8B000B5D4C /* resource_cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5C11C55BB8B000B5D4C /* resource_cache.cpp */; };
 		E50DB5C51C55BB9A000B5D4C /* resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5C41C55BB9A000B5D4C /* resource_manager.cpp */; };
 		E5FBBCC31C598FBE00BDF5D7 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = E5FBBCC21C598FBE00BDF5D7 /* Resources */; };
+		E5FBBCCA1C59AD7A00BDF5D7 /* state_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5FBBCC91C59AD7A00BDF5D7 /* state_manager.cpp */; };
+		E5FBBCCC1C59AD8A00BDF5D7 /* state.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5FBBCCB1C59AD8A00BDF5D7 /* state.cpp */; };
 		E5FBBCD11C5B2CD200BDF5D7 /* notifiable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5FBBCD01C5B2CD200BDF5D7 /* notifiable.cpp */; };
 		E5FBBCD31C5B2CDB00BDF5D7 /* updatable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5FBBCD21C5B2CDB00BDF5D7 /* updatable.cpp */; };
 /* End PBXBuildFile section */
@@ -136,6 +138,10 @@
 		E50DB5C41C55BB9A000B5D4C /* resource_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = resource_manager.cpp; sourceTree = "<group>"; };
 		E5A07F361C99DB1D003813FB /* iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = iterator.hpp; sourceTree = "<group>"; };
 		E5FBBCC21C598FBE00BDF5D7 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
+		E5FBBCC71C59AD6500BDF5D7 /* state.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = state.hpp; sourceTree = "<group>"; };
+		E5FBBCC81C59AD6E00BDF5D7 /* state_manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = state_manager.hpp; sourceTree = "<group>"; };
+		E5FBBCC91C59AD7A00BDF5D7 /* state_manager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = state_manager.cpp; sourceTree = "<group>"; };
+		E5FBBCCB1C59AD8A00BDF5D7 /* state.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = state.cpp; sourceTree = "<group>"; };
 		E5FBBCCE1C5B1F4400BDF5D7 /* notifiable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = notifiable.hpp; sourceTree = "<group>"; };
 		E5FBBCCF1C5B1F4E00BDF5D7 /* updatable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = updatable.hpp; sourceTree = "<group>"; };
 		E5FBBCD01C5B2CD200BDF5D7 /* notifiable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = notifiable.cpp; sourceTree = "<group>"; };
@@ -215,6 +221,7 @@
 				E50DB56A1C54282F000B5D4C /* Mac */,
 				E50DB5BF1C55BB67000B5D4C /* Resource */,
 				E5FBBCC21C598FBE00BDF5D7 /* Resources */,
+				E5FBBCC41C59AD4200BDF5D7 /* State */,
 				E50DB5B31C5435FA000B5D4C /* Utility */,
 				E5FBBCCD1C5B1F2000BDF5D7 /* Virtual */,
 			);
@@ -326,6 +333,25 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		E5FBBCC41C59AD4200BDF5D7 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				E5FBBCC91C59AD7A00BDF5D7 /* state_manager.cpp */,
+				E5FBBCC81C59AD6E00BDF5D7 /* state_manager.hpp */,
+				E5FBBCCB1C59AD8A00BDF5D7 /* state.cpp */,
+				E5FBBCC71C59AD6500BDF5D7 /* state.hpp */,
+				E5FBBCC61C59AD5000BDF5D7 /* States */,
+			);
+			name = State;
+			sourceTree = "<group>";
+		};
+		E5FBBCC61C59AD5000BDF5D7 /* States */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = States;
+			sourceTree = "<group>";
+		};
 		E5FBBCCD1C5B1F2000BDF5D7 /* Virtual */ = {
 			isa = PBXGroup;
 			children = (
@@ -426,7 +452,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E50DB56F1C542A43000B5D4C /* application.cpp in Sources */,
+				E5FBBCCC1C59AD8A00BDF5D7 /* state.cpp in Sources */,
 				E50DB5BE1C55B605000B5D4C /* platform_path.mm in Sources */,
+				E5FBBCCA1C59AD7A00BDF5D7 /* state_manager.cpp in Sources */,
 				E5FBBCD31C5B2CDB00BDF5D7 /* updatable.cpp in Sources */,
 				E504AE9B1C569B1500C60171 /* input_action_context.cpp in Sources */,
 				E504AEA11C569B1500C60171 /* input_activation.cpp in Sources */,
