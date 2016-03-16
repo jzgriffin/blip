@@ -8,7 +8,6 @@
 #include "blip/state_manager.hpp"
 #include "blip/iterator.hpp"
 #include <SFML/Graphics/RenderTarget.hpp>
-#include <algorithm>
 
 namespace blip {
 
