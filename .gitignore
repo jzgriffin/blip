@@ -1,8 +1,9 @@
 .vs/
 Documents/Reference/Output/
-bin/
-obj/
+build/
 xcuserdata/
 *.db
 *.opendb
+*.sdf
+*.suo
 *.user
