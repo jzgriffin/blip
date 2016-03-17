@@ -2,6 +2,7 @@
 Documents/Reference/Output/
 build/
 xcuserdata/
+*.aps
 *.db
 *.opendb
 *.sdf

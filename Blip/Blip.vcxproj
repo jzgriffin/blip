@@ -59,6 +59,7 @@
     <ClInclude Include="lexical_cast.hpp" />
     <ClInclude Include="notifiable.hpp" />
     <ClInclude Include="path.hpp" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="resource_cache.hpp" />
     <ClInclude Include="resource_manager.hpp" />
     <ClInclude Include="state.hpp" />
@@ -68,6 +69,9 @@
     <ClInclude Include="xml_converter.hpp" />
     <ClInclude Include="xml_deserializer.hpp" />
     <ClInclude Include="xml_serializer.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D68C6141-5367-41BC-9268-3F0739897D40}</ProjectGuid>

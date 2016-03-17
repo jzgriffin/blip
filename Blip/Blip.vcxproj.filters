@@ -182,5 +182,13 @@
     <ClInclude Include="..\Dependencies\include\pugixml.hpp">
       <Filter>Dependencies\include</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Windows</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc">
+      <Filter>Windows</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
