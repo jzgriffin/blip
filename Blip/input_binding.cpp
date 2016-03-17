@@ -194,7 +194,6 @@ std::ostream& operator<<(std::ostream& os, input_device rhs)
     }
 
     throw std::logic_error{"unmapped input_device"};
-    return os;
 }
 
 std::istream& operator>>(std::istream& is, input_controller_control& rhs)
@@ -235,7 +234,6 @@ std::ostream& operator<<(std::ostream& os, input_controller_control rhs)
     }
 
     throw std::logic_error{"unmapped input_controller_control"};
-    return os;
 }
 
 bool xml_converter<input_controller_axis_binding>::deserialize(

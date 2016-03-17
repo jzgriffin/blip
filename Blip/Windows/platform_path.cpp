@@ -16,10 +16,17 @@ using namespace blip;
 /// \return resources path
 std::string find_resources_path()
 {
+    auto get_current_directory = [](std::wstring& path)
+    {
+        auto size = static_cast<DWORD>(path.size());
+        auto ptr = &path[0];
+        return GetCurrentDirectoryW(size, ptr) != 0;
+    };
+
     std::wstring path;
     do {
         path.resize(path.size() + MAX_PATH);
-    } while (GetCurrentDirectoryW(path.size(), &path[0]) == 0);
+    } while (!get_current_directory(path));
     return narrow(path);
 }
 
@@ -64,7 +71,7 @@ bool create_directory(std::string const& path)
             }
         }
 
-        return CreateDirectoryA(path.c_str(), nullptr);
+        return CreateDirectoryA(path.c_str(), nullptr) == TRUE;
     }
     return (attr & FILE_ATTRIBUTE_DIRECTORY)
         || (attr & FILE_ATTRIBUTE_REPARSE_POINT);

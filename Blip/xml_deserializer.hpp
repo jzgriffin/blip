@@ -23,7 +23,7 @@ struct xml_deserializer
 
     /// \brief Gets a value indicating whether the deserializer has a node
     /// \return whether the deserializer has a node
-    operator bool() const noexcept { return node; }
+    operator bool() const noexcept { return !!node; }
 
     /// \brief Gets a child from the node
     /// \param name name of the child

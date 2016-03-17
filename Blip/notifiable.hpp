@@ -10,7 +10,7 @@
 namespace sf {
 
 // Forward declarations
-struct Event;
+class Event;
 
 }
 

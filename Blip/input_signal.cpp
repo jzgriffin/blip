@@ -63,7 +63,6 @@ std::ostream& operator<<(std::ostream& os, input_signal rhs)
     }
 
     throw std::logic_error{"unmapped input_signal"};
-    return os;
 }
 
 }

@@ -119,7 +119,6 @@ std::ostream& operator<<(
 
     throw std::logic_error{
         "unmapped input_analog_activation_condition_names"};
-    return os;
 }
 
 bool xml_converter<input_analog_activation>::deserialize(

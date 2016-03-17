@@ -23,7 +23,7 @@ struct xml_serializer
 
     /// \brief Gets a value indicating whether the serializer has a node
     /// \return whether the serializer has a node
-    operator bool() const noexcept { return node; }
+    operator bool() const noexcept { return !!node; }
 
     /// \brief Appends a child to the node
     /// \param name name of the child
