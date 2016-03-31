@@ -102,6 +102,9 @@
     <ClCompile Include="..\Dependencies\src\pugixml.cpp">
       <Filter>Dependencies\src</Filter>
     </ClCompile>
+    <ClCompile Include="main_menu_state.cpp">
+      <Filter>State\States</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="application.hpp">
@@ -184,6 +187,9 @@
     </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="main_menu_state.hpp">
+      <Filter>State\States</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -6,6 +6,7 @@
 /// \ingroup application
 
 #include "blip/application.hpp"
+#include "blip/main_menu_state.hpp"
 #include "blip/path.hpp"
 #include "blip/xml_deserializer.hpp"
 #include "blip/xml_serializer.hpp"
@@ -50,6 +51,8 @@ void application::exit(int exit_code) noexcept
 
 int application::run()
 {
+    _state_mgr.push_back(std::make_unique<main_menu_state>(*this));
+
     sf::Clock frame_clock;
     float time_step{0.0f};
 

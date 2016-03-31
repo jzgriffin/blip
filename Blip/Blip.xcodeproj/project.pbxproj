@@ -51,6 +51,7 @@
 		E50DB5C21C55BB8B000B5D4C /* resource_cache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5C11C55BB8B000B5D4C /* resource_cache.cpp */; };
 		E50DB5C51C55BB9A000B5D4C /* resource_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E50DB5C41C55BB9A000B5D4C /* resource_manager.cpp */; };
 		E5595FE91C9A170100C15DDC /* string.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5595FE71C9A170100C15DDC /* string.cpp */; };
+		E5FA34ED1CADC09700B5BEAC /* main_menu_state.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5FA34EC1CADC09700B5BEAC /* main_menu_state.cpp */; };
 		E5FBBCC31C598FBE00BDF5D7 /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = E5FBBCC21C598FBE00BDF5D7 /* Resources */; };
 		E5FBBCCA1C59AD7A00BDF5D7 /* state_manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5FBBCC91C59AD7A00BDF5D7 /* state_manager.cpp */; };
 		E5FBBCCC1C59AD8A00BDF5D7 /* state.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5FBBCCB1C59AD8A00BDF5D7 /* state.cpp */; };
@@ -140,6 +141,8 @@
 		E5595FE71C9A170100C15DDC /* string.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = string.cpp; sourceTree = "<group>"; };
 		E5595FE81C9A170100C15DDC /* string.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = string.hpp; sourceTree = "<group>"; };
 		E5A07F361C99DB1D003813FB /* iterator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = iterator.hpp; sourceTree = "<group>"; };
+		E5FA34EB1CADC07700B5BEAC /* main_menu_state.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = main_menu_state.hpp; sourceTree = "<group>"; };
+		E5FA34EC1CADC09700B5BEAC /* main_menu_state.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main_menu_state.cpp; sourceTree = "<group>"; };
 		E5FBBCC21C598FBE00BDF5D7 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 		E5FBBCC71C59AD6500BDF5D7 /* state.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = state.hpp; sourceTree = "<group>"; };
 		E5FBBCC81C59AD6E00BDF5D7 /* state_manager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = state_manager.hpp; sourceTree = "<group>"; };
@@ -353,6 +356,8 @@
 		E5FBBCC61C59AD5000BDF5D7 /* States */ = {
 			isa = PBXGroup;
 			children = (
+				E5FA34EC1CADC09700B5BEAC /* main_menu_state.cpp */,
+				E5FA34EB1CADC07700B5BEAC /* main_menu_state.hpp */,
 			);
 			name = States;
 			sourceTree = "<group>";
@@ -473,6 +478,7 @@
 				E504AE9C1C569B1500C60171 /* input_action.cpp in Sources */,
 				E5FBBCD11C5B2CD200BDF5D7 /* notifiable.cpp in Sources */,
 				E50DB5C21C55BB8B000B5D4C /* resource_cache.cpp in Sources */,
+				E5FA34ED1CADC09700B5BEAC /* main_menu_state.cpp in Sources */,
 				E504AE9D1C569B1500C60171 /* input_binding_context.cpp in Sources */,
 				E50DB5AC1C543348000B5D4C /* configuration.cpp in Sources */,
 				E504AEA21C569B1500C60171 /* input_signal.cpp in Sources */,

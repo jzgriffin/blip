@@ -31,6 +31,7 @@
     <ClCompile Include="input_signal.cpp" />
     <ClCompile Include="input_specification.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="main_menu_state.cpp" />
     <ClCompile Include="notifiable.cpp" />
     <ClCompile Include="path.cpp" />
     <ClCompile Include="resource_cache.cpp" />
@@ -57,6 +58,7 @@
     <ClInclude Include="input_specification.hpp" />
     <ClInclude Include="iterator.hpp" />
     <ClInclude Include="lexical_cast.hpp" />
+    <ClInclude Include="main_menu_state.hpp" />
     <ClInclude Include="notifiable.hpp" />
     <ClInclude Include="path.hpp" />
     <ClInclude Include="resource.h" />
